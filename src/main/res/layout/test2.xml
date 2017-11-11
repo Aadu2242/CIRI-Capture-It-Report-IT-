@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bootstrap="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout android:id="@+id/capture_media_buttons" android:layout_height="wrap_content"
+    android:layout_width="fill_parent">
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:text=""
+        android:textSize="32sp"
+        bootstrap:bb_icon_left="fa-camera"
+        bootstrap:bb_type="danger"
+        android:id="@+id/view2" />
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:text=""
+        android:textSize="32sp"
+        bootstrap:bb_icon_left="fa-microphone"
+        bootstrap:bb_type="primary" />
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:text=""
+        android:textSize="32sp"
+        bootstrap:bb_icon_left="fa-video-camera"
+        bootstrap:bb_type="warning"
+        android:id="@+id/view4" />
+
+</LinearLayout>
+
+<com.beardedhen.androidbootstrap.BootstrapButton
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="Capture Video"
+bootstrap:bb_icon_right="fa-puzzle-piece"
+bootstrap:bb_type="default" />
+
+
+    </LinearLayout>

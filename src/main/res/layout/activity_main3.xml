@@ -1,0 +1,113 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    android:baselineAligned="false"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <!--&lt;!&ndash; Capture picture button &ndash;&gt;-->
+        <!--<Button-->
+            <!--android:id="@+id/btnCapturePicture"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Take a Picture"-->
+            <!--android:layout_marginBottom="10dp"/>-->
+
+        <!--&lt;!&ndash; Record video button &ndash;&gt;-->
+        <!--<Button-->
+            <!--android:id="@+id/btnRecordVideo"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Record a Video" />-->
+
+        <Button
+            android:id="@+id/btnGPSShowLocation"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/btnNWShowLocation"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="36dp"
+            android:minWidth="100dp"
+            android:text="Show Location\n(GPS)" />
+
+        <Button
+            android:id="@+id/btnNWShowLocation"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnGPSShowLocation"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="44dp"
+            android:minWidth="100dp"
+            android:text="Show Location\n(network provider)" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView1"
+            android:layout_marginTop="67dp"
+            android:layout_toLeftOf="@+id/imageView1"
+            android:onClick="start"
+            android:text="start" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/button1"
+            android:layout_alignBottom="@+id/button1"
+            android:layout_alignRight="@+id/textView1"
+            android:layout_marginRight="40dp"
+            android:onClick="stop"
+            android:text="stop" />
+
+        <Button
+            android:id="@+id/button3"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button2"
+            android:layout_centerHorizontal="true"
+            android:onClick="play"
+            android:text="play" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Preview" 
+            android:padding="10dp"
+            android:textSize="15dp"/>
+
+        <!-- To display picture taken -->
+        <ImageView
+            android:id="@+id/imgPreview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <!-- To preview video recorded -->
+        <VideoView
+            android:id="@+id/videoPreview"
+            android:layout_width="wrap_content"
+            android:layout_height="400dp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>
